@@ -1,0 +1,26 @@
+1.需要库： opencv，swig，java jdk
+2.需要的文件：hand_detect.cpp, hand_detect.h,_hand_detect.i
+
+
+编译步骤：
+1. swig -c++  -java -package javatcallc -outdir  ./   hand_detect.i
+备注：会在当前目录下生成 hand_detect_wrap.cxx 和两个java文件
+
+2. g++ -Wall -c -fPIC hand_detect.cpp hand_detect_wrap.cxx -I/usr/lib/jvm/java-8-openjdk-amd64/include -I/usr/lib/jvm/java-8-openjdk-amd64/include/linux `pkg-config --cflags --libs opencv`
+
+备注：会出现两个.o文件：hand_detect_wrap.o hand_detect.o
+
+3. g++ -shared -fPIC hand_detect_wrap.o hand_detect.o -o libhand_detect.so `pkg-config --cflags --libs opencv`
+备注：编译出文件为：libhand_detect.so
+
+用法：
+将java文件拷贝到你的工程里，将libhand_detect.so添加到库目录下，使用之前发过的示例用就可以了。
+
+
+
+
+
+
+硬件环境上：可见env.jpeg。0号摄像头可以放低些，但需要拍摄到整个屏幕，我这边测试高度约33cm左右。1号摄像头同理，但也需要拍到整个屏幕，我这边测试高度约18cm左右。另外，框选单双击区域的框可以尽量小些
+
+out1.avi，out2.avi是两次运行后的结果
