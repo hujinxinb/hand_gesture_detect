@@ -12,3 +12,15 @@
 检测滑动放大手势：
 <br><br>
 ![Image text](https://github.com/hujinxinb/hand_gesture_detect/blob/master/img/1.jpg)
+<br><br>
+检测滑动缩小手势：
+<br><br>
+![Image text](https://github.com/hujinxinb/hand_gesture_detect/blob/master/img/2.jpg)
+<br><br>
+检测单击手势：
+<br><br>
+![Image text](https://github.com/hujinxinb/hand_gesture_detect/blob/master/img/3.jpg)
+<br><br>
+检测双击手势：
+<br><br>
+![Image text](https://github.com/hujinxinb/hand_gesture_detect/blob/master/img/4.jpg)
