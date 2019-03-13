@@ -10,4 +10,4 @@
 对这块区域，我们用Convex Hull包围盒，找到端点和凸包点，它们的连线即为五指。
 
 检测滑动放大手势：
-
+![Image text](https://github.com/hujinxinb/hand_gesture_detect/blob/master/img/1.jpg)
